@@ -6,6 +6,29 @@
 
 <a id="english"></a>
 
+## 先用一次：输入学习目标，最后拿到什么
+
+这是给AI助手使用的学习规划Skill，**不是打开网站就自动生成课程的服务**。
+
+| 你提供什么 | 示例 | 助手接下来给什么 |
+| --- | --- | --- |
+| 学什么、想做到什么 | “Python自动化，8周后能整理Excel” | 确认领域与目标；随后出10至15题水平测评 |
+| 可投入时间与限制 | “每天40分钟，预算为0，工作日学习” | 按约束调整的学习范围 |
+| 你的测评答案 | 按题号回答，不会的写不会 | 薄弱点分析、阶段路线、练习与复习计划 |
+
+### 一次完整交互
+
+1. 按后文安装方法把包含SKILL.md、references和resources的整个目录装到支持Skill的AI助手中。实际Skill名称是 `learning-planner`，仓库名称多了后缀 `-skill`。
+2. 显式调用该Skill，并发送：“我想用8周学Python自动化，每天40分钟，希望最后能批量整理Excel。我现在只写过简单脚本，请先测评，不要直接给计划。”
+3. 先完成测评必做题，再把答案交回助手。Skill需要根据答案判断起点，你不作答时，下一步通常还是等待/补充测评，而不是已经完成了个性化计划。
+4. 核对薄弱点与可投入时间，再让助手给阶段目标、每日任务、资源和复习节奏；需要可打印文件时明确提出Word或HTML交付。
+
+**输出在哪里：**默认是会话中的测评、分析和计划；只有明确要求并且助手有文件工具时，才会额外生成DOCX、HTML清单等文件。日历建议不会自动替你创建提醒，需要实际日历/自动化工具和相应授权。
+
+**独立Word模板：**`references/generate_test.py`是测评卷模板，不是自动分析你水平的模型程序。安装requirements后直接运行会生成脚本内置示例卷，输出在references目录；适配新领域要修改main里的题目数据。
+
+Codex安装与显式调用方式可核对[官方Skills说明](https://learn.chatgpt.com/docs/build-skills)；已有同名Skill时先比较版本，避免重复目录。
+
 ## English
 
 A Claude Code skill that designs personalized learning plans grounded in cognitive science. It starts with a **diagnostic quiz** to locate your current level, then builds a complete roadmap with evidence-based strategies — every task tagged with the science behind *why* it works.
