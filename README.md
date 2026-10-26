@@ -1,5 +1,7 @@
 # Learning Planner · 先测评，再规划
 
+[简体中文](README.md) | [English](README.en.md)
+
 给 AI 助手使用的学习规划 Skill。先用 10–15 道题判断起点，再按薄弱点、时间与目标组织学习路线，避免只凭“零基础”或“想进阶”生成一份泛化日程表。
 
 适用于编程、语言、考试、数学、设计等主题。**仓库名是 learning-planner-skill，实际调用名是 learning-planner**。它是一套助手工作流与参考材料，不是独立网站。
